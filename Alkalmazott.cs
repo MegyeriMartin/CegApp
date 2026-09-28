@@ -6,5 +6,23 @@ namespace CegApp
 {
     internal class Alkalmazott
     {
+        public string Nev { get; set; }
+        protected int Alapber { get; set; }
+
+        public Alkalmazott(string nev, int alapber)
+        {
+            Nev = nev;
+            Alapber = alapber;
+        }
+
+        public virtual int Fizetes()
+        {
+            return Alapber;
+        }
+
+        public override string ToString()
+        {
+            return $"{Nev} - Alapbér: {Alapber} Ft";
+        }
     }
 }
